@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	body {
+		font-family: Tajawal;
+		font-weight: 500;
+	}
+
+		/* Hide scrollbar for WebKit browsers */
+		::-webkit-scrollbar {
+				display: none;
+		}
+	
+		/* Hide scrollbar for Firefox */
+		html {
+				scrollbar-width: none; /* Firefox */
+		}
+	
+	.slider-menu {
+		width: 100%;
+		overflow-x: scroll;
+		white-space: nowrap;
+		scrollbar-width: none; /* Hide scrollbar for Firefox */
+	}
+	
+	.slider-menu::-webkit-scrollbar {
+		display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+	}
+	
+	.slider-content {
+		display: inline-block;
+	}
+	
+	.menu-item {
+		display: inline-block;
+		width: 150px;
+		height: 100px;
+		margin-right: 10px;
+		background-color: #f1f1f1;
+		text-align: center;
+		line-height: 100px;
+		border-radius: 8px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		font-size: 1.2rem;
+		cursor: pointer;
+	}
+	
+	.menu-item:hover {
+		background-color: #ddd;
+	}
+	
+}
