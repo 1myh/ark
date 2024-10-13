@@ -26,7 +26,7 @@ const Header = () => {
 				</div>
 				<div className={`flex ${language ? "flex-row-reverse" : "flex-row"} w-full mt-5 text-gray-500 px-5 justify-center items-center`} >
 					<FaSearch className={``} />
-					<input dir={language ? "rtl" : ""} className={` w-full px-3 py-2 rounded-md ${language ? "text-right" : "text-left"}`} placeholder={language ? 'ابحث هنا...' : 'search here...'} type="text" />
+					<input dir={language ? "rtl" : ""} className={`focus:outline-none w-full px-3 py-2 rounded-md ${language ? "text-right" : "text-left"}`} placeholder={language ? 'ابحث هنا...' : 'search here...'} type="text" />
 				</div>
 			</div>
 		</div>
