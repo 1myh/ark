@@ -21,7 +21,7 @@ const Categories = ({categoriess}) => {
 					key={category.id}
 					onClick={() => handleCategoryClick(category.id)}
 					image={category.img}
-					title={category.name}
+					title={language ? category.name : category.enName}
 					isSelected={category.isActive}
 				/>
 			))}

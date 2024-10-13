@@ -11,7 +11,7 @@ const Dishes = ({platess}) => {
 			{platess
 				.filter((plate) => plate.departmentID === selectedCategoryId)
 				.map((plate) => (
-					<DishCard key={plate.name} image={plate.img} title={plate.name} price={plate.price} desc={plate.desc} id={plate.id} />
+					<DishCard key={plate.name} image={plate.img} title={language ? plate.name : plate.enName} price={plate.price} desc={language ? plate.desc : plate.enDesc} id={plate.id} />
 			))}
 		</div>
 	)
