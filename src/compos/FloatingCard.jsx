@@ -10,7 +10,7 @@ const FloatingCard = () => {
 			<div className={`flex relative`} >
         <h1 className={`text-white text-lg mr-3`} >عرض الطلب</h1>
         <IoCart className={`text-white text-3xl mx-1`} />
-        <div className={`bg-dish text-white text-xl rounded-full p-2 h-7 absolute left-36 bottom-7 w-7 flex text-center justify-center items-start `} style={{ boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.2)" }} >{cartCounter}</div>
+        <div className={`bg-dish text-white text-2xl pt-2 px-4 rounded-full absolute left-36 bottom-7 flex text-end justify-center items-center `} style={{ boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.2)" }} >{cartCounter}</div>
       </div>
 		</button>
   );
