@@ -2,16 +2,14 @@ import React from 'react'
 import Header from './compos/Header'
 import Home from './pages/Home'
 import DishPage from './pages/DishPage'
-import Category from "./compos/Category";
-import DishCard from "./compos/DishCard";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Routes, Route } from 'react-router-dom'
 import { atomCategories, atomPlates, atomSelectedCategoryId } from './atoms/atom';
 import { useAtom } from 'jotai'
-import Categories from "./compos/Categories";
-import Dishes from "./compos/Dishes";
-import FloatingCard from './compos/FloatingCard';
 import Footer from './compos/Footer';
+import Settings from './pages/Settings';
+import { data } from './atoms/data';
+import RatePage from "./pages/RatePage"
 
 const App = () => {
   // VARIABLES
@@ -38,6 +36,7 @@ const App = () => {
         })));
       }
     };
+    
 
     const fetchPlates = async () => {
       // Fetch menus from your API
@@ -58,11 +57,21 @@ const App = () => {
     })));
   };
   return (
-    <div className={``} >
-      <Header />
+    <div style={{backgroundColor: data.appBackgroundColor}} >
+      <Header
+        textColor={data.headerTextColor}
+        backgroundColor={data.headerBackgroundColor}
+        buttonBackgroundColorHover={data.headerButtonBackgroundColorHover}
+        buttonBackgroundColor={data.headerButtonBackgroundColor}
+        buttonIconColor={data.headerButtonIconColor}
+        buttonIconColorHover={data.headerButtonIconColorHover}
+      />
+
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/:title' element={<DishPage />} />
+        <Route path='/settings' element={<Settings />} />
+        <Route path='/rate' element={<RatePage />} />
       </Routes>
       <Footer />
     </div>

@@ -9,6 +9,7 @@ import { atomCategories, atomPlates, atomSelectedCategoryId } from "../atoms/ato
 import { useAtom } from "jotai";
 import Categories from "../compos/Categories";
 import Dishes from "../compos/Dishes";
+import { data } from "../atoms/data";
 
 
 const Home = () => {
@@ -24,7 +25,7 @@ const Home = () => {
       {/* CATEGORIES */}
       <Categories categoriess={categories} />
 
-      <FloatingCard />
+      <FloatingCard textColor={data.floatCardTextColor} textColorHover={data.floatCardTextColorHover} backgroundColor={data.floatCardBackgroundColor} backgroundColorHover={data.floatCardBackgroundColorHover} />
 
       {/* DISHES */}
       {categories.some(category => category.isActive) && (

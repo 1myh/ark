@@ -2,6 +2,7 @@ import React from 'react'
 import Category from "./Category"
 import { useAtom } from 'jotai'
 import { atomCategories, atomPlates, atomSelectedCategoryId, atomLanguage } from "../atoms/atom";
+import { data } from '../atoms/data';
 
 const Categories = ({categoriess}) => {
 	let [language, setLanguage] = useAtom(atomLanguage)
@@ -23,6 +24,10 @@ const Categories = ({categoriess}) => {
 					image={category.img}
 					title={language ? category.name : category.enName}
 					isSelected={category.isActive}
+					backgroundColor={data.categoryBackgroundColor}
+					backgroundColorHover={data.categoryBackgroundColorHover}
+					textColor={data.categoryTextColor}
+					textColorHover={data.categoryTextColorHover}
 				/>
 			))}
       </div>
